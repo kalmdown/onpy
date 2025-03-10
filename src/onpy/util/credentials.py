@@ -1,3 +1,4 @@
+# src\onpy\util\credentials.py
 """Manages OnShape credentials.
 
 The credentials used in OnPy can be stored locally in a file, or through
@@ -28,35 +29,17 @@ class CredentialManager:
 
     @staticmethod
     def is_secret_key(token: str | None) -> bool:
-        """Check if dev secret key regex matches expected pattern.
-
-        Args:
-            token: The token to check
-
-        Returns:
-            True if regex matches, False otherwise
-
-        """
+        """Check if dev secret key regex matches expected pattern."""
         if not token:
             return False
-
-        return len(token) == SECRET_KEY_LEN
+        return len(token) == SECRET_KEY_LEN  # Verify length is 48 characters
 
     @staticmethod
     def is_access_key(token: str | None) -> bool:
-        """Check if dev access key regex matches expected pattern.
-
-        Args:
-            token: The token to check
-
-        Returns:
-            True if regex matches, False otherwise
-
-        """
+        """Check if dev access key regex matches expected pattern."""
         if not token:
             return False
-
-        return len(token) == ACCESS_KEY_LEN
+        return len(token) == ACCESS_KEY_LEN  # Verify length is 24 characters
 
     @staticmethod
     def fetch_dev_tokens() -> tuple[str, str] | None:
