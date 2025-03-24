@@ -1,4 +1,4 @@
-# src\onpy\api\rest_api.py
+# src/onpy/api/rest_api.py
 
 """RestApi interface to the OnShape server.
 
@@ -31,7 +31,7 @@ if TYPE_CHECKING:
 class RestApi:
     """Interface for OnShape API Requests."""
 
-    BASE_URL = "https://cad.onshape.com/api/v6"
+    BASE_URL = "https://cad.onshape.com/api/v10"
 
     def __init__(self, client: "Client") -> None:
         """Construct a new rest api interface instance.

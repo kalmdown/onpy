@@ -7,7 +7,7 @@ import pytest
 
 LOG_FILE = "TESTS_API_CALLS.txt"
 
-def log_api_call(http_method, endpoint, payload=None, base_url="https://cad.onshape.com/api/v6"):
+def log_api_call(http_method, endpoint, payload=None, base_url="https://cad.onshape.com/api/v10"):
     """Log API calls to a file with test context"""
     # Get the current test name
     current_test = os.environ.get('PYTEST_CURRENT_TEST', '').split(':')[-1].split(' ')[0]
